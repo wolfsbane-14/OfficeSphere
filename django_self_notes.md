@@ -115,3 +115,12 @@ Users.objects.all()
 
 - Context processors let you specify a number of variables that get set in each context automatically – without you having to specify the variables in each `render()` call.
 
+
+## How to Delete/Insert/Update An Object Using QuerySet In Django?
+
+### QuerySet To Insert/Add An Object:
+
+```python
+new_user = User(name="Nitin Mangotra", city="Gurgaon")
+new_user.save()
+```
