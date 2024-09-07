@@ -12,7 +12,38 @@
   <title>Add Employee</title>
 </head>
 <body>
-  <h1>add emp</h1>
+  <div class="container">
+    <h1>Add An Employee</h1>
+    <hr>
+
+    <form action = "/add_emp" method="post">
+        {% csrf_token %} 
+        {% comment %} added for security purpose to avoid unwanted attack {% endcomment %}
+
+        <label for="first_name">First Name</label><br>
+        <input type="text" id="first_name" value = "{{first_name}}"><br>
+
+        <label for="last_name">Last Name</label><br>
+        <input type="text" id="last_name" value = "{{last_name}}"><br>
+
+        <label for="salary">Salary</label><br>
+        <input type="number" id="salary" value = "{{salary}}"><br>
+
+        <label for="dept">Department</label><br>
+        <input type="number" id="dept" value = "{{dept}}"><br>
+
+        <label for="role">Role</label><br>
+        <input type="number" id="role" value = "{{role}}"><br>
+
+        <label for="bonus">Bonus</label><br>
+        <input type="number" id="bonus" value = "{{bonus}}"><br>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+  </div>
 
   <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
