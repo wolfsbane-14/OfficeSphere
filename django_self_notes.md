@@ -124,3 +124,29 @@ Users.objects.all()
 new_user = User(name="Nitin Mangotra", city="Gurgaon")
 new_user.save()
 ```
+
+
+## Explain Q Objects in Django ORM?
+
+**Q object** `django.db.models.Q` is an object to encapsulate a collection of keyword arguments specified as FIELD LOOKUPS.  
+**Q objects** are used to write complex queries, as in filter() functions just "AND" the conditions, while if you want to "OR" the conditions you can use Q objects.
+
+Let's see an example:
+
+```python
+from django.db import models
+from django.db.models import Q
+
+Models.objects.get( 
+  Q(question__startswith='When') | 
+  Q(answer__startswith='On') | 
+  Q(answer__startswith='At') 
+)
+
+[Q Objects can be combined with the help of the | and & operators to get a new Q Object]
+
+This is equivalent to the following SQL WHERE Clause:
+```sql
+SELECT * FROM Model WHERE question LIKE 'When%' 
+  AND (answer='On%' OR answer='At%')
+```

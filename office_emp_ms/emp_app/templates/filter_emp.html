@@ -12,7 +12,31 @@
     <title>Filter Employee</title>
 </head>
 <body>
-    <h1>filter emp</h1>
+    <div class="container">
+      <h1>Filter Employee Detail</h1>
+      <hr>
+
+      <form action = "/filter_emp" method="post">
+        {% csrf_token %} 
+        {% comment %} added for security purpose to avoid unwanted attack {% endcomment %}
+
+        <label for="first_name">Employee First/Last Name</label><br>
+        <input type="text" id="name"  name = "name" value = "{{name}}"><br>
+
+        <label for="dept">Department</label><br>
+        <input type="number" id="dept" name = "dept"  value = "{{dept}}"><br>
+
+        <label for="role">Role</label><br>
+        <input type="number" id="role"  name = "role" value = "{{role}}"><br>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+
+
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
