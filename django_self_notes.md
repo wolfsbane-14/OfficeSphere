@@ -142,6 +142,7 @@ Models.objects.get(
   Q(answer__startswith='On') | 
   Q(answer__startswith='At') 
 )
+```
 
 [Q Objects can be combined with the help of the | and & operators to get a new Q Object]
 
