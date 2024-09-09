@@ -50,12 +50,17 @@ After running the server, open your browser and navigate to `http://127.0.0.1:80
 
 ## Screenshot
 
+- Home Page
 ![Home Page](img/image1.png "Home Page")
 
+- Add New Employees Section
 ![Add New Employees Section](img/image2.png "Add New Employees Section")
 
+- All Employee Details Section
 ![All Employee Details Section](img/image3.png "All Employee Details Section")
 
+- Filter Employee Details Section
 ![Filter Employee Details Section](img/image4.png "Filter Employee Details Section")
 
+- Remove Employee Data Section
 ![Remove Employee Data Section](img/image5.png "Remove Employee Data Section")
